@@ -10,7 +10,7 @@
 
 ```yaml
 dependencies:
-    json_tree_viewer: ^0.0.1
+    json_tree_viewer: ^0.0.2
 ```
 
 ## Screen Shot

@@ -1,6 +1,6 @@
 name: json_tree_viewer
 description: A simple tree widget to show json pretty.
-version: 0.0.1
+version: 0.0.2
 repository: https://github.com/youngchan1988/json_tree_viewer
 issue_tracker: https://github.com/youngchan1988/json_tree_viewer/issues
 publish_to: https://pub.dev
@@ -13,7 +13,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  flexible_tree_view: ^0.0.2
+  flexible_tree_view: ^0.0.5
 
 dev_dependencies:
   flutter_test:
