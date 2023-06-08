@@ -55,7 +55,7 @@ class _JsonTreeViewerState extends State<JsonTreeViewer> {
       builder: (context, constraints) {
         return FlexibleTreeView<JsonElement>(
           nodes: _jsonNodes,
-          nodeWidth: constraints.constrainWidth(),
+          nodeWidth: constraints.constrainWidth() - 16,
           nodeItemBuilder: (context, node) {
             return _nodeWidget(context, node);
           },
