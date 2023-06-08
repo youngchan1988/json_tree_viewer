@@ -51,11 +51,17 @@ class _JsonTreeViewerState extends State<JsonTreeViewer> {
 
   @override
   Widget build(BuildContext context) {
-    return FlexibleTreeView<JsonElement>(
-        nodes: _jsonNodes,
-        nodeItemBuilder: (context, node) {
-          return _nodeWidget(context, node);
-        });
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        return FlexibleTreeView<JsonElement>(
+          nodes: _jsonNodes,
+          nodeWidth: constraints.constrainWidth() - 16,
+          nodeItemBuilder: (context, node) {
+            return _nodeWidget(context, node);
+          },
+        );
+      },
+    );
   }
 
   Widget _nodeWidget(BuildContext context, TreeNode<JsonElement> jsonNode) {
@@ -89,7 +95,6 @@ class _JsonTreeViewerState extends State<JsonTreeViewer> {
             ConstrainedBox(
               constraints: const BoxConstraints(
                 minWidth: 30,
-                maxWidth: 80,
               ),
               child: Tooltip(
                 message: jsonElement.key!.length > 12 ? jsonElement.key! : '',
